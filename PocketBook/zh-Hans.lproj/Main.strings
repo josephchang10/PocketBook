@@ -1,0 +1,21 @@
+
+/* Class = "UITextField"; placeholder = "请输入描述"; ObjectID = "37U-qU-iKF"; */
+"37U-qU-iKF.placeholder" = "请输入描述";
+
+/* Class = "UILabel"; text = "¥0.00"; ObjectID = "If0-kB-rLJ"; */
+"If0-kB-rLJ.text" = "¥0.00";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Xg7-1y-sZP"; */
+"Xg7-1y-sZP.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "ZiT-ec-N8c"; */
+"ZiT-ec-N8c.normalTitle" = "Cancel";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "c37-GM-OTr"; */
+"c37-GM-OTr.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "+"; ObjectID = "hLm-9V-s3b"; */
+"hLm-9V-s3b.normalTitle" = "+";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "xeM-Sz-R04"; */
+"xeM-Sz-R04.text" = "Label";
