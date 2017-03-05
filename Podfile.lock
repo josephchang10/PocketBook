@@ -1,0 +1,20 @@
+PODS:
+  - DateToolsSwift (2.0.0)
+  - Realm (2.4.3):
+    - Realm/Headers (= 2.4.3)
+  - Realm/Headers (2.4.3)
+  - RealmSwift (2.4.3):
+    - Realm (= 2.4.3)
+
+DEPENDENCIES:
+  - DateToolsSwift
+  - RealmSwift
+
+SPEC CHECKSUMS:
+  DateToolsSwift: 27336736d877c8734159da1f37afbda2aa704649
+  Realm: e08d60b0048ccccd3949c8c28a92c4db5712d7e9
+  RealmSwift: 30d49739ccb3385d201242736ca4dda56aec9dfc
+
+PODFILE CHECKSUM: 6cafa09cfdff62a940b51ace12c310669f1d6b57
+
+COCOAPODS: 1.2.0

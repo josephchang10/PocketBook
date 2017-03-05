@@ -7,13 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39EFC1E288EF133DC9668701 /* Pods_PocketBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF74FD1B5E95A7E5CF6CDE9 /* Pods_PocketBook.framework */; };
+		7C66A65A1E6C0C000091062B /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C66A6591E6C0C000091062B /* ListViewController.swift */; };
+		7C66A65D1E6C47D80091062B /* RecordCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C66A65C1E6C47D80091062B /* RecordCollectionViewCell.swift */; };
+		7C66A6601E6C4BD20091062B /* RecordCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C66A65F1E6C4BD20091062B /* RecordCollectionViewLayout.swift */; };
+		7C66A6631E6C4ED50091062B /* AddRecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C66A6621E6C4ED50091062B /* AddRecordButton.swift */; };
 		7CDD67F01E6A9B5C0034E3A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDD67EF1E6A9B5C0034E3A6 /* AppDelegate.swift */; };
-		7CDD67F21E6A9B5C0034E3A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDD67F11E6A9B5C0034E3A6 /* ViewController.swift */; };
+		7CDD67F21E6A9B5C0034E3A6 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDD67F11E6A9B5C0034E3A6 /* RecordViewController.swift */; };
 		7CDD67F51E6A9B5C0034E3A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CDD67F31E6A9B5C0034E3A6 /* Main.storyboard */; };
 		7CDD67F71E6A9B5C0034E3A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CDD67F61E6A9B5C0034E3A6 /* Assets.xcassets */; };
 		7CDD67FA1E6A9B5C0034E3A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CDD67F81E6A9B5C0034E3A6 /* LaunchScreen.storyboard */; };
 		7CDD68051E6A9B5C0034E3A6 /* PocketBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDD68041E6A9B5C0034E3A6 /* PocketBookTests.swift */; };
 		7CDD68101E6A9B5C0034E3A6 /* PocketBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDD680F1E6A9B5C0034E3A6 /* PocketBookUITests.swift */; };
+		7CDD68211E6A9C860034E3A6 /* RecordKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDD68201E6A9C860034E3A6 /* RecordKeyboard.swift */; };
+		7CDD68251E6A9D300034E3A6 /* RecordKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CDD68241E6A9D300034E3A6 /* RecordKeyboard.xib */; };
+		7CDD68281E6AA0080034E3A6 /* RecordNumberButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDD68271E6AA0080034E3A6 /* RecordNumberButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +42,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5BF74FD1B5E95A7E5CF6CDE9 /* Pods_PocketBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C66A6591E6C0C000091062B /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		7C66A65C1E6C47D80091062B /* RecordCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordCollectionViewCell.swift; sourceTree = "<group>"; };
+		7C66A65F1E6C4BD20091062B /* RecordCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordCollectionViewLayout.swift; sourceTree = "<group>"; };
+		7C66A6621E6C4ED50091062B /* AddRecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRecordButton.swift; sourceTree = "<group>"; };
 		7CDD67EC1E6A9B5C0034E3A6 /* PocketBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CDD67EF1E6A9B5C0034E3A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7CDD67F11E6A9B5C0034E3A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7CDD67F11E6A9B5C0034E3A6 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		7CDD67F41E6A9B5C0034E3A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7CDD67F61E6A9B5C0034E3A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7CDD67F91E6A9B5C0034E3A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +60,11 @@
 		7CDD680B1E6A9B5C0034E3A6 /* PocketBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CDD680F1E6A9B5C0034E3A6 /* PocketBookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketBookUITests.swift; sourceTree = "<group>"; };
 		7CDD68111E6A9B5C0034E3A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CDD68201E6A9C860034E3A6 /* RecordKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordKeyboard.swift; sourceTree = "<group>"; };
+		7CDD68241E6A9D300034E3A6 /* RecordKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordKeyboard.xib; sourceTree = "<group>"; };
+		7CDD68271E6AA0080034E3A6 /* RecordNumberButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordNumberButton.swift; sourceTree = "<group>"; };
+		ADE2DD8F16E5A1566F12C6A0 /* Pods-PocketBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketBook/Pods-PocketBook.release.xcconfig"; sourceTree = "<group>"; };
+		E3CD72739FB1B501417FACBC /* Pods-PocketBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketBook/Pods-PocketBook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39EFC1E288EF133DC9668701 /* Pods_PocketBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +93,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28FEDFE85B3E4FFD5A6FF5D0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E3CD72739FB1B501417FACBC /* Pods-PocketBook.debug.xcconfig */,
+				ADE2DD8F16E5A1566F12C6A0 /* Pods-PocketBook.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7C66A65B1E6C47B40091062B /* RecordCell */ = {
+			isa = PBXGroup;
+			children = (
+				7C66A65C1E6C47D80091062B /* RecordCollectionViewCell.swift */,
+			);
+			name = RecordCell;
+			sourceTree = "<group>";
+		};
+		7C66A65E1E6C4B940091062B /* RecordLayout */ = {
+			isa = PBXGroup;
+			children = (
+				7C66A65F1E6C4BD20091062B /* RecordCollectionViewLayout.swift */,
+			);
+			name = RecordLayout;
+			sourceTree = "<group>";
+		};
+		7C66A6611E6C4E9E0091062B /* AddButton */ = {
+			isa = PBXGroup;
+			children = (
+				7C66A6621E6C4ED50091062B /* AddRecordButton.swift */,
+			);
+			name = AddButton;
+			sourceTree = "<group>";
+		};
 		7CDD67E31E6A9B5C0034E3A6 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +133,8 @@
 				7CDD68031E6A9B5C0034E3A6 /* PocketBookTests */,
 				7CDD680E1E6A9B5C0034E3A6 /* PocketBookUITests */,
 				7CDD67ED1E6A9B5C0034E3A6 /* Products */,
+				28FEDFE85B3E4FFD5A6FF5D0 /* Pods */,
+				BECC44642146ADDC716A9D3C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +151,9 @@
 		7CDD67EE1E6A9B5C0034E3A6 /* PocketBook */ = {
 			isa = PBXGroup;
 			children = (
+				7CDD681E1E6A9C350034E3A6 /* Views */,
+				7CDD681D1E6A9BEB0034E3A6 /* Controllers */,
 				7CDD67EF1E6A9B5C0034E3A6 /* AppDelegate.swift */,
-				7CDD67F11E6A9B5C0034E3A6 /* ViewController.swift */,
 				7CDD67F31E6A9B5C0034E3A6 /* Main.storyboard */,
 				7CDD67F61E6A9B5C0034E3A6 /* Assets.xcassets */,
 				7CDD67F81E6A9B5C0034E3A6 /* LaunchScreen.storyboard */,
@@ -125,6 +180,52 @@
 			path = PocketBookUITests;
 			sourceTree = "<group>";
 		};
+		7CDD681D1E6A9BEB0034E3A6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7CDD67F11E6A9B5C0034E3A6 /* RecordViewController.swift */,
+				7C66A6591E6C0C000091062B /* ListViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		7CDD681E1E6A9C350034E3A6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7C66A6611E6C4E9E0091062B /* AddButton */,
+				7C66A65E1E6C4B940091062B /* RecordLayout */,
+				7C66A65B1E6C47B40091062B /* RecordCell */,
+				7CDD681F1E6A9C4B0034E3A6 /* Record Keyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		7CDD681F1E6A9C4B0034E3A6 /* Record Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				7CDD68261E6A9FEA0034E3A6 /* NumberButton */,
+				7CDD68201E6A9C860034E3A6 /* RecordKeyboard.swift */,
+				7CDD68241E6A9D300034E3A6 /* RecordKeyboard.xib */,
+			);
+			name = "Record Keyboard";
+			sourceTree = "<group>";
+		};
+		7CDD68261E6A9FEA0034E3A6 /* NumberButton */ = {
+			isa = PBXGroup;
+			children = (
+				7CDD68271E6AA0080034E3A6 /* RecordNumberButton.swift */,
+			);
+			name = NumberButton;
+			sourceTree = "<group>";
+		};
+		BECC44642146ADDC716A9D3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BF74FD1B5E95A7E5CF6CDE9 /* Pods_PocketBook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +233,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7CDD68141E6A9B5C0034E3A6 /* Build configuration list for PBXNativeTarget "PocketBook" */;
 			buildPhases = (
+				D5DC4B4E010FF1B79B6B3675 /* [CP] Check Pods Manifest.lock */,
 				7CDD67E81E6A9B5C0034E3A6 /* Sources */,
 				7CDD67E91E6A9B5C0034E3A6 /* Frameworks */,
 				7CDD67EA1E6A9B5C0034E3A6 /* Resources */,
+				C979CA2F5079F935848136E1 /* [CP] Embed Pods Frameworks */,
+				13B4F85923B25C7F16892708 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -238,6 +342,7 @@
 				7CDD67FA1E6A9B5C0034E3A6 /* LaunchScreen.storyboard in Resources */,
 				7CDD67F71E6A9B5C0034E3A6 /* Assets.xcassets in Resources */,
 				7CDD67F51E6A9B5C0034E3A6 /* Main.storyboard in Resources */,
+				7CDD68251E6A9D300034E3A6 /* RecordKeyboard.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,13 +362,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		13B4F85923B25C7F16892708 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PocketBook/Pods-PocketBook-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C979CA2F5079F935848136E1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PocketBook/Pods-PocketBook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5DC4B4E010FF1B79B6B3675 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7CDD67E81E6A9B5C0034E3A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CDD67F21E6A9B5C0034E3A6 /* ViewController.swift in Sources */,
+				7CDD67F21E6A9B5C0034E3A6 /* RecordViewController.swift in Sources */,
+				7CDD68211E6A9C860034E3A6 /* RecordKeyboard.swift in Sources */,
 				7CDD67F01E6A9B5C0034E3A6 /* AppDelegate.swift in Sources */,
+				7C66A65A1E6C0C000091062B /* ListViewController.swift in Sources */,
+				7C66A6631E6C4ED50091062B /* AddRecordButton.swift in Sources */,
+				7CDD68281E6AA0080034E3A6 /* RecordNumberButton.swift in Sources */,
+				7C66A6601E6C4BD20091062B /* RecordCollectionViewLayout.swift in Sources */,
+				7C66A65D1E6C47D80091062B /* RecordCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +574,7 @@
 		};
 		7CDD68151E6A9B5C0034E3A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3CD72739FB1B501417FACBC /* Pods-PocketBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = T4TW6Z2N88;
@@ -428,6 +588,7 @@
 		};
 		7CDD68161E6A9B5C0034E3A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADE2DD8F16E5A1566F12C6A0 /* Pods-PocketBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = T4TW6Z2N88;
@@ -516,6 +677,7 @@
 				7CDD68161E6A9B5C0034E3A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7CDD68171E6A9B5C0034E3A6 /* Build configuration list for PBXNativeTarget "PocketBookTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +686,7 @@
 				7CDD68191E6A9B5C0034E3A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7CDD681A1E6A9B5C0034E3A6 /* Build configuration list for PBXNativeTarget "PocketBookUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +695,7 @@
 				7CDD681C1E6A9B5C0034E3A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
