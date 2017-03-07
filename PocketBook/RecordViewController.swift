@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import DateTimePicker
 
 class Record: Object {
     dynamic var des: String = ""
@@ -23,6 +24,15 @@ class RecordViewController: UIViewController{
         }
     }
     
+    var time: Date! {
+        didSet {
+            let formatter = DateFormatter()
+            formatter.timeZone = NSTimeZone.local
+            formatter.dateFormat = "M月d日 HH:mm"
+            timeLabel.text = formatter.string(from: time)
+        }
+    }
+    
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var descriptionTextField: UITextField!
     
@@ -31,10 +41,16 @@ class RecordViewController: UIViewController{
     
     @IBOutlet weak var cancelButtonBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var keyboardView: RecordKeyboard!
+    @IBOutlet weak var timeLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        time = Date()
+        timeLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(RecordViewController.selectTime)))
+        
         // 初始化自定义键盘
         let keyboardView = RecordKeyboard(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         keyboardView.delegate = self // 键盘会通知视图控制器，在按下一个键的时候
@@ -95,6 +111,16 @@ class RecordViewController: UIViewController{
                 cancelButtonBottomConstraint.constant = 0
             }
     }
+    
+    func selectTime() {
+        let picker = DateTimePicker.show()
+        picker.selectedDate = time
+        picker.highlightColor = UIColor(red:0.60, green:0.91, blue:0.78, alpha:1.00)
+        picker.completionHandler = { date in
+            // do something after tapping done
+            self.time = date
+        }
+    }
 }
 
 extension RecordViewController: RecordKeyboardDelegate {
@@ -146,7 +172,7 @@ extension RecordViewController: UITextFieldDelegate {
             let newRecord = Record()
             newRecord.des = textField.text ?? ""
             newRecord.num = Double(numberString)!
-            newRecord.time = Date()
+            newRecord.time = time
             
             let realm = try! Realm()
             try! realm.write {
