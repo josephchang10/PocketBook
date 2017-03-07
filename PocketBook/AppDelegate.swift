@@ -37,6 +37,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Tell Realm to use this new configuration object for the default Realm
         Realm.Configuration.defaultConfiguration = config
         
+        let serverURL = URL(string: "http://123.206.230.33:9080")!
+        let cloudKitCredentials = SyncCredentials.cloudKit(token: "39fa626f1f20b0da16ea2b4a1a4e1fbe4a5e18bd97010cc7885c7033acf294b5")
+        SyncUser.logIn(with: cloudKitCredentials,
+                       server: serverURL) { user, error in
+                        if let user = user {
+                            // can now open a synchronized Realm with this user
+                            print(user)
+                        } else if let error = error {
+                            // handle error
+                            print(error)
+                        }
+        }
+        
         return true
     }
 

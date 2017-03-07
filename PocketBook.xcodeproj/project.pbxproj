@@ -47,6 +47,7 @@
 		7C66A65C1E6C47D80091062B /* RecordCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordCollectionViewCell.swift; sourceTree = "<group>"; };
 		7C66A65F1E6C4BD20091062B /* RecordCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordCollectionViewLayout.swift; sourceTree = "<group>"; };
 		7C66A6621E6C4ED50091062B /* AddRecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRecordButton.swift; sourceTree = "<group>"; };
+		7CB6B70F1E6D4A9D00B1B008 /* PocketBook.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PocketBook.entitlements; sourceTree = "<group>"; };
 		7CC3EF8B1E6C75C600ECA86E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		7CC3EF8C1E6C75C600ECA86E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		7CDD67EC1E6A9B5C0034E3A6 /* PocketBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +154,7 @@
 		7CDD67EE1E6A9B5C0034E3A6 /* PocketBook */ = {
 			isa = PBXGroup;
 			children = (
+				7CB6B70F1E6D4A9D00B1B008 /* PocketBook.entitlements */,
 				7CDD681E1E6A9C350034E3A6 /* Views */,
 				7CDD681D1E6A9BEB0034E3A6 /* Controllers */,
 				7CDD67EF1E6A9B5C0034E3A6 /* AppDelegate.swift */,
@@ -301,6 +303,14 @@
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = T4TW6Z2N88;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
 					};
 					7CDD67FF1E6A9B5C0034E3A6 = {
 						CreatedOnToolsVersion = 8.3;
@@ -523,7 +533,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -569,7 +579,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -583,6 +593,7 @@
 			baseConfigurationReference = E3CD72739FB1B501417FACBC /* Pods-PocketBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PocketBook/PocketBook.entitlements;
 				DEVELOPMENT_TEAM = T4TW6Z2N88;
 				INFOPLIST_FILE = PocketBook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -598,6 +609,7 @@
 			baseConfigurationReference = ADE2DD8F16E5A1566F12C6A0 /* Pods-PocketBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PocketBook/PocketBook.entitlements;
 				DEVELOPMENT_TEAM = T4TW6Z2N88;
 				INFOPLIST_FILE = PocketBook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
