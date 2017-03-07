@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable
 
-class RecordNumberButton: UIButton {
+class RecordNumberButton: RecordWhiteButton {
     
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -19,5 +19,4 @@ class RecordNumberButton: UIButton {
         titleLabel?.font = UIFont.systemFont(ofSize: 50, weight: UIFontWeightThin)
     }
     
-
 }

@@ -118,7 +118,7 @@
                         <action selector="keyTapped:" destination="-1" eventType="touchUpInside" id="7kb-y7-vX5"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wy-ca-0Ur">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wy-ca-0Ur" customClass="RecordWhiteButton" customModule="PocketBook" customModuleProvider="target">
                     <rect key="frame" x="1" y="500" width="93.5" height="167"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="50"/>
                     <state key="normal" title="·">
