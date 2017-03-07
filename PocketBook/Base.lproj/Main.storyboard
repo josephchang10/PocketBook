@@ -65,15 +65,24 @@
                                                     <action selector="cancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fXs-Uo-kVs"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qna-bA-dR0">
+                                                <rect key="frame" x="8" y="58" width="359" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.43137254901960786" green="0.792156862745098" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="37U-qU-iKF" secondAttribute="trailing" id="0vk-jJ-VUv"/>
                                             <constraint firstItem="37U-qU-iKF" firstAttribute="centerX" secondItem="uZU-Mw-s3D" secondAttribute="centerX" id="1Vi-OO-ze7"/>
                                             <constraint firstItem="37U-qU-iKF" firstAttribute="top" secondItem="uZU-Mw-s3D" secondAttribute="top" constant="20" id="F2D-dG-AVh"/>
+                                            <constraint firstAttribute="trailing" secondItem="Qna-bA-dR0" secondAttribute="trailing" constant="8" id="JsM-9U-gqJ"/>
+                                            <constraint firstItem="Qna-bA-dR0" firstAttribute="leading" secondItem="uZU-Mw-s3D" secondAttribute="leading" constant="8" id="NmW-0c-D0D"/>
                                             <constraint firstItem="37U-qU-iKF" firstAttribute="leading" secondItem="uZU-Mw-s3D" secondAttribute="leading" id="Qe4-2E-73h"/>
                                             <constraint firstAttribute="bottom" secondItem="ZiT-ec-N8c" secondAttribute="bottom" id="TAj-7K-UvF"/>
                                             <constraint firstAttribute="trailing" secondItem="ZiT-ec-N8c" secondAttribute="trailing" id="YNY-UL-YVf"/>
+                                            <constraint firstItem="Qna-bA-dR0" firstAttribute="top" secondItem="37U-qU-iKF" secondAttribute="bottom" constant="8" id="cK9-ll-oWf"/>
                                             <constraint firstItem="ZiT-ec-N8c" firstAttribute="leading" secondItem="uZU-Mw-s3D" secondAttribute="leading" id="tFh-Xv-eMj"/>
                                         </constraints>
                                     </view>
@@ -113,11 +122,12 @@
                         <outlet property="descriptionTextField" destination="37U-qU-iKF" id="ZAK-Hq-UlD"/>
                         <outlet property="keyboardView" destination="Wl8-4L-nWc" id="QUp-b1-52C"/>
                         <outlet property="numberLabel" destination="If0-kB-rLJ" id="8yj-Vv-UO2"/>
+                        <outlet property="timeLabel" destination="Qna-bA-dR0" id="XuS-AF-thq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-50" y="15"/>
+            <point key="canvasLocation" x="-50.399999999999999" y="14.842578710644679"/>
         </scene>
         <!--List View Controller-->
         <scene sceneID="5SW-AD-jPe">
