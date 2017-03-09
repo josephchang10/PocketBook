@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Eureka.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-PocketBook.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,17 +37,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>5B59E101CD5DF01BBEEEB6886CB35BD2</key>
+		<key>56B6F8899FF6697E375344420F940288</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6511A0BB2A0F1BF1E973FCA86204E3E7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8BCA2C522ABC9ECA07B279A3DF91C877</key>
+		<key>675A114988AE198732ED4AD726408964</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,7 +52,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>D84A8AAE217E1A2BAEB14EB995BCE750</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>E89CFD99B895BCC6E8EDC2F95A03500C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F2028E733F00E2341C1B8F673AB36AC1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

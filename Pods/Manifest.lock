@@ -1,6 +1,7 @@
 PODS:
   - DateTimePicker (1.0.3)
   - DateToolsSwift (2.0.0)
+  - Eureka (2.0.1)
   - Realm (2.4.3):
     - Realm/Headers (= 2.4.3)
   - Realm/Headers (2.4.3)
@@ -10,14 +11,16 @@ PODS:
 DEPENDENCIES:
   - DateTimePicker
   - DateToolsSwift
+  - Eureka (~> 2.0)
   - RealmSwift
 
 SPEC CHECKSUMS:
   DateTimePicker: 23ca73cee22ff485e9e2fbfa4e4082845ce65e95
   DateToolsSwift: 27336736d877c8734159da1f37afbda2aa704649
+  Eureka: ae837bb1dfae0c07bc1bda7aeef87876eeb537c2
   Realm: e08d60b0048ccccd3949c8c28a92c4db5712d7e9
   RealmSwift: 30d49739ccb3385d201242736ca4dda56aec9dfc
 
-PODFILE CHECKSUM: 6576836b534c56bda2cfadc4a48d75d05e07cbd6
+PODFILE CHECKSUM: bbc84b9ce4badfef69a454c2b78ec8a2c9f0dbeb
 
 COCOAPODS: 1.2.0
