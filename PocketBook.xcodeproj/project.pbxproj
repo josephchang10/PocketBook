@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		39EFC1E288EF133DC9668701 /* Pods_PocketBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF74FD1B5E95A7E5CF6CDE9 /* Pods_PocketBook.framework */; };
 		7C0F90491E6ED7F20050B2E2 /* RecordWhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0F90481E6ED7F20050B2E2 /* RecordWhiteButton.swift */; };
+		7C594ED51E719D5B007C53EC /* EditRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C594ED41E719D5B007C53EC /* EditRecordViewController.swift */; };
 		7C66A65A1E6C0C000091062B /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C66A6591E6C0C000091062B /* ListViewController.swift */; };
 		7C66A65D1E6C47D80091062B /* RecordCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C66A65C1E6C47D80091062B /* RecordCollectionViewCell.swift */; };
 		7C66A6601E6C4BD20091062B /* RecordCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C66A65F1E6C4BD20091062B /* RecordCollectionViewLayout.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		5BF74FD1B5E95A7E5CF6CDE9 /* Pods_PocketBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C0F90481E6ED7F20050B2E2 /* RecordWhiteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordWhiteButton.swift; sourceTree = "<group>"; };
+		7C594ED41E719D5B007C53EC /* EditRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditRecordViewController.swift; sourceTree = "<group>"; };
 		7C66A6591E6C0C000091062B /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		7C66A65C1E6C47D80091062B /* RecordCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordCollectionViewCell.swift; sourceTree = "<group>"; };
 		7C66A65F1E6C4BD20091062B /* RecordCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordCollectionViewLayout.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			children = (
 				7CDD67F11E6A9B5C0034E3A6 /* RecordViewController.swift */,
 				7C66A6591E6C0C000091062B /* ListViewController.swift */,
+				7C594ED41E719D5B007C53EC /* EditRecordViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				7C66A6631E6C4ED50091062B /* AddRecordButton.swift in Sources */,
 				7C0F90491E6ED7F20050B2E2 /* RecordWhiteButton.swift in Sources */,
 				7CDD68281E6AA0080034E3A6 /* RecordNumberButton.swift in Sources */,
+				7C594ED51E719D5B007C53EC /* EditRecordViewController.swift in Sources */,
 				7C66A6601E6C4BD20091062B /* RecordCollectionViewLayout.swift in Sources */,
 				7C66A65D1E6C47D80091062B /* RecordCollectionViewCell.swift in Sources */,
 			);

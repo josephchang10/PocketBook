@@ -103,10 +103,24 @@ extension ListViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let p = gesture.location(in: self.collectionView)
         
         if let indexPath = self.collectionView.indexPathForItem(at: p) {
-            let actionSheet = UIAlertController(title: nil, message: "Delete?", preferredStyle: .actionSheet)
+            let record = self.records[indexPath.row]
+            let actionSheet = UIAlertController(title: nil, message: "Action?", preferredStyle: .actionSheet)
+            actionSheet.addAction(UIAlertAction(title: "Edit", style: .default, handler: { (action) in
+                let editVC = EditRecordViewController()
+                editVC.record = record
+                editVC.didFinishEdit = { num, des, time in
+                    try! self.realm.write {
+                        record.des = des
+                        record.num = num
+                        record.time = time
+                    }
+                }
+                let nav = UINavigationController(rootViewController: editVC)
+                self.present(nav, animated: true, completion: nil)
+            }))
             actionSheet.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (action) in
                 try! self.realm.write {
-                    self.realm.delete(self.records[indexPath.row])
+                    self.realm.delete(record)
                 }
             }))
             actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
