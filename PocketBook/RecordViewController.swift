@@ -75,11 +75,17 @@ class RecordViewController: UIViewController{
         
         NotificationCenter.default.addObserver(self, selector: #selector(RecordViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(RecordViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(RecordViewController.endEditing)))
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func endEditing() {
+        view.endEditing(true)
     }
     
     func numberLabelTapped() {
@@ -113,6 +119,7 @@ class RecordViewController: UIViewController{
     }
     
     func selectTime() {
+        endEditing()
         let picker = DateTimePicker.show()
         picker.selectedDate = time
         picker.highlightColor = UIColor(red:0.60, green:0.91, blue:0.78, alpha:1.00)
