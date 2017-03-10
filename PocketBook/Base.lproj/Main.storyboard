@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12113" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Feq-YO-ZeJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Feq-YO-ZeJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12078"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -142,9 +142,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lpL-y7-TIS">
-                                <rect key="frame" x="0.0" y="20" width="375" height="559"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="579"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="hF9-89-mOG">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" id="hF9-89-mOG" customClass="RecordCollectionViewLayout" customModule="PocketBook" customModuleProvider="target">
                                     <size key="itemSize" width="90" height="107"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -168,14 +168,23 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Xg7-1y-sZP">
-                                                    <rect key="frame" x="16" y="63" width="58" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pT0-1e-xTT">
+                                                    <rect key="frame" x="8" y="60" width="74" height="23"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Xg7-1y-sZP">
+                                                            <rect key="frame" x="18.5" y="2.5" width="37.5" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="Xg7-1y-sZP" firstAttribute="centerY" secondItem="pT0-1e-xTT" secondAttribute="centerY" id="eyJ-ei-SBD"/>
+                                                        <constraint firstItem="Xg7-1y-sZP" firstAttribute="centerX" secondItem="pT0-1e-xTT" secondAttribute="centerX" id="iGP-Yr-WUE"/>
+                                                    </constraints>
+                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="xeM-Sz-R04">
-                                                    <rect key="frame" x="16" y="82" width="58" height="16"/>
+                                                    <rect key="frame" x="28.5" y="83" width="33" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -184,14 +193,14 @@
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="Xg7-1y-sZP" firstAttribute="width" secondItem="c37-GM-OTr" secondAttribute="width" id="EY7-uv-mAh"/>
+                                            <constraint firstItem="xeM-Sz-R04" firstAttribute="centerX" secondItem="qRH-8V-zse" secondAttribute="centerX" id="6FB-U0-nyW"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="c37-GM-OTr" secondAttribute="trailing" constant="8" id="FBZ-hm-jGg"/>
-                                            <constraint firstItem="Xg7-1y-sZP" firstAttribute="centerX" secondItem="c37-GM-OTr" secondAttribute="centerX" id="JEC-te-6Xg"/>
-                                            <constraint firstItem="Xg7-1y-sZP" firstAttribute="top" secondItem="c37-GM-OTr" secondAttribute="bottom" constant="3" id="MUN-ij-vv2"/>
-                                            <constraint firstItem="xeM-Sz-R04" firstAttribute="width" secondItem="Xg7-1y-sZP" secondAttribute="width" id="aZd-BV-U0f"/>
+                                            <constraint firstItem="pT0-1e-xTT" firstAttribute="trailing" secondItem="qRH-8V-zse" secondAttribute="trailingMargin" id="HHe-gi-TRx"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="xeM-Sz-R04" secondAttribute="bottom" id="NRG-zq-o0t"/>
+                                            <constraint firstItem="pT0-1e-xTT" firstAttribute="leading" secondItem="qRH-8V-zse" secondAttribute="leadingMargin" id="Ngf-P0-xv2"/>
+                                            <constraint firstItem="pT0-1e-xTT" firstAttribute="top" secondItem="c37-GM-OTr" secondAttribute="bottom" id="Yao-sp-cGf"/>
                                             <constraint firstItem="c37-GM-OTr" firstAttribute="top" secondItem="qRH-8V-zse" secondAttribute="topMargin" constant="12" id="fZC-KC-NNk"/>
-                                            <constraint firstItem="xeM-Sz-R04" firstAttribute="top" secondItem="Xg7-1y-sZP" secondAttribute="bottom" constant="1" id="kk6-Qx-eVj"/>
-                                            <constraint firstItem="xeM-Sz-R04" firstAttribute="centerX" secondItem="Xg7-1y-sZP" secondAttribute="centerX" id="ol4-Lc-DFh"/>
+                                            <constraint firstItem="xeM-Sz-R04" firstAttribute="top" secondItem="pT0-1e-xTT" secondAttribute="bottom" id="gKK-JU-nxx"/>
                                             <constraint firstItem="c37-GM-OTr" firstAttribute="leading" secondItem="qRH-8V-zse" secondAttribute="leadingMargin" constant="8" id="xau-Qd-WLs"/>
                                         </constraints>
                                         <connections>
@@ -207,17 +216,15 @@
                                 </connections>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQX-aD-VCD">
-                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLm-9V-s3b" customClass="AddRecordButton" customModule="PocketBook" customModuleProvider="target">
-                                        <rect key="frame" x="169.5" y="8" width="35" height="35"/>
-                                        <color key="backgroundColor" red="0.59999999999999998" green="0.90980392160000001" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLm-9V-s3b" customClass="AddRecordButton" customModule="PocketBook" customModuleProvider="target">
+                                        <rect key="frame" x="170" y="8" width="35" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="QWt-Gz-c5C"/>
                                             <constraint firstAttribute="width" constant="35" id="WDU-cY-Ex6"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="+">
+                                        <state key="normal" image="AddRecordButton">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -229,7 +236,7 @@
                                 <constraints>
                                     <constraint firstItem="hLm-9V-s3b" firstAttribute="top" secondItem="UQX-aD-VCD" secondAttribute="top" constant="8" id="3gO-cR-toB"/>
                                     <constraint firstItem="hLm-9V-s3b" firstAttribute="centerX" secondItem="UQX-aD-VCD" secondAttribute="centerX" id="f81-hX-zaJ"/>
-                                    <constraint firstAttribute="height" constant="80" id="w7a-9b-JgE"/>
+                                    <constraint firstAttribute="height" constant="60" id="w7a-9b-JgE"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -253,4 +260,7 @@
             <point key="canvasLocation" x="760.79999999999995" y="14.842578710644679"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AddRecordButton" width="35" height="35"/>
+    </resources>
 </document>

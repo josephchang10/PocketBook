@@ -604,11 +604,12 @@
 				CODE_SIGN_ENTITLEMENTS = PocketBook/PocketBook.entitlements;
 				DEVELOPMENT_TEAM = T4TW6Z2N88;
 				INFOPLIST_FILE = PocketBook/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = social.street.PocketBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -620,11 +621,12 @@
 				CODE_SIGN_ENTITLEMENTS = PocketBook/PocketBook.entitlements;
 				DEVELOPMENT_TEAM = T4TW6Z2N88;
 				INFOPLIST_FILE = PocketBook/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = social.street.PocketBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
