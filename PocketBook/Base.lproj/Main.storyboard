@@ -171,13 +171,14 @@
                                                     <rect key="frame" x="8" y="60" width="74" height="23"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Xg7-1y-sZP">
-                                                            <rect key="frame" x="18.5" y="2.5" width="37.5" height="18"/>
+                                                            <rect key="frame" x="0.0" y="2.5" width="74" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstItem="Xg7-1y-sZP" firstAttribute="leading" secondItem="pT0-1e-xTT" secondAttribute="leading" id="bKs-MX-Snp"/>
                                                         <constraint firstItem="Xg7-1y-sZP" firstAttribute="centerY" secondItem="pT0-1e-xTT" secondAttribute="centerY" id="eyJ-ei-SBD"/>
                                                         <constraint firstItem="Xg7-1y-sZP" firstAttribute="centerX" secondItem="pT0-1e-xTT" secondAttribute="centerX" id="iGP-Yr-WUE"/>
                                                     </constraints>
