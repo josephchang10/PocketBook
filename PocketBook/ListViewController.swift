@@ -24,15 +24,26 @@ class ListViewController: UIViewController {
     var records: Results<Record>! {
         didSet {
             collectionView.reloadData()
-            
-            var sum = 0.0
-            for record in records {
-                sum += record.num
-            }
-            sumLabel.text = "汇总 ￥\(sum)"
+            reloadSum()
             
         }
     }
+    var sum = 0.0
+    var todaySum = 0.0
+    
+    func reloadSum() {
+        sum = 0.0
+        todaySum = 0.0
+        let startOfDay = Calendar.current.startOfDay(for: Date())
+        for record in records {
+            sum += record.num
+            if startOfDay < record.time {
+                todaySum += record.num
+            }
+        }
+        sumLabel.text = "汇总 ￥\(sum)\n今日 ￥\(todaySum)"
+    }
+    
     var categorys: Results<Category>!
     var token: NotificationToken?
     lazy var realm: Realm = {
@@ -65,6 +76,7 @@ class ListViewController: UIViewController {
                     collectionView.deleteItems(at: deletions.map { IndexPath(row: $0, section: 0) })
                     collectionView.reloadItems(at: modifications.map { IndexPath(row: $0, section: 0) })
                 }, completion: { _ in })
+                self?.reloadSum()
                 break
             case .error(let error):
                 // An error occurred while opening the Realm file on the background worker thread
