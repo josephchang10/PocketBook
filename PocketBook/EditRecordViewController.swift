@@ -8,58 +8,81 @@
 
 import UIKit
 import Eureka
+import RealmSwift
 
 class EditRecordViewController: FormViewController {
 
     var record: Record!
-    var didFinishEdit: ((_ num: Double, _ des: String, _ time: Date?)->Void)?
+    let realm = try! Realm()
+    var categorys : Results<Category>!
+    var options = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Edit"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(EditRecordViewController.cancel))
+        
+        categorys = realm.objects(Category.self)
+        for category in categorys {
+            options.append(category.content)
+        }
         
         form +++ Section()
             <<< DecimalRow("numRow"){
                 $0.title = "金额"
                 $0.placeholder = "¥"
                 $0.value = record.num
-            }
+            }.onChange({ (row) in
+                
+                if let value = row.value {
+                    try! self.realm.write {
+                        self.record.num = value
+                    }
+                }
+                
+            })
             <<< TextRow("desRow"){
                 $0.title = "描述"
                 $0.value = record.des
-            }
+                }.onChange({ (row) in
+                    
+                    if let value = row.value {
+                        try! self.realm.write {
+                            self.record.des = value
+                        }
+                    }
+                    
+                })
             <<< DateTimeRow("timeRow"){
                 $0.title = "消费时间"
                 $0.value = record.time
-            }
+                }.onChange({ (row) in
+                    
+                    if let value = row.value {
+                        try! self.realm.write {
+                            self.record.time = value
+                        }
+                    }
+                    
+                })
+            <<< PushRow<String>("categoryRow"){
+                $0.title = "类别"
+                $0.options = options
+                $0.value = record.category?.content
+                $0.selectorTitle = "Choose a category"
+            }.onChange({ (row) in
+                try! self.realm.write {
+                    self.record.category = self.categorys[self.options.index(of: row.value!)!]
+                    print("已将类别修改为：\(self.record.category?.content)")
+                }
+            })
         
         form +++ Section()
             <<< ButtonRow(){
                 $0.title = "Done"
             }.onCellSelection({ (cell, row) in
-                var num = self.record.num
-                var des = self.record.des
-                var time = self.record.time
-                if let row = self.form.rowBy(tag: "numRow") as? DecimalRow {
-                    if let value = row.value {
-                        num = value
-                    }
-                }
-                if let row = self.form.rowBy(tag: "desRow") as? TextRow {
-                    if let value = row.value {
-                        des = value
-                    }
-                }
-                time = (self.form.rowBy(tag: "timeRow") as? DateTimeRow)?.value
-                self.didFinishEdit?(num, des, time)
                 self.dismiss(animated: true, completion: nil)
             })
-    }
-    
-    func cancel() {
-        dismiss(animated: true, completion: nil)
     }
     
 }

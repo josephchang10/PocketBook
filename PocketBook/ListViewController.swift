@@ -108,13 +108,6 @@ extension ListViewController: UICollectionViewDelegate, UICollectionViewDataSour
             actionSheet.addAction(UIAlertAction(title: "Edit", style: .default, handler: { (action) in
                 let editVC = EditRecordViewController()
                 editVC.record = record
-                editVC.didFinishEdit = { num, des, time in
-                    try! self.realm.write {
-                        record.des = des
-                        record.num = num
-                        record.time = time
-                    }
-                }
                 let nav = UINavigationController(rootViewController: editVC)
                 self.present(nav, animated: true, completion: nil)
             }))
