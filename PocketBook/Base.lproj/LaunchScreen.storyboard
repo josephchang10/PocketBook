@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +19,76 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZIE-PO-qgX">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igr-xO-ZYT">
+                                        <rect key="frame" x="170" y="8" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="Cag-N6-qbk"/>
+                                            <constraint firstAttribute="width" constant="35" id="Tk0-IR-Tfi"/>
+                                        </constraints>
+                                        <state key="normal" image="AddRecordButton">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B45-TN-Cbi">
+                                        <rect key="frame" x="0.0" y="0.0" width="170" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrX-80-iu5">
+                                                <rect key="frame" x="69.5" y="12" width="31" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                <state key="normal" title="筛选">
+                                                    <color key="titleColor" red="0.43137254899999999" green="0.79215686269999996" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="xrX-80-iu5" firstAttribute="centerY" secondItem="B45-TN-Cbi" secondAttribute="centerY" constant="-3" id="hvm-W7-fBL"/>
+                                            <constraint firstItem="xrX-80-iu5" firstAttribute="centerX" secondItem="B45-TN-Cbi" secondAttribute="centerX" id="o0P-Ai-Vrx"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r2A-AR-ywR">
+                                        <rect key="frame" x="205" y="0.0" width="170" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="汇总" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yqw-vB-ifF">
+                                                <rect key="frame" x="70" y="18" width="31" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="0.43137254899999999" green="0.79215686269999996" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="Yqw-vB-ifF" firstAttribute="centerY" secondItem="r2A-AR-ywR" secondAttribute="centerY" constant="-3" id="Dk7-Yu-O9o"/>
+                                            <constraint firstItem="Yqw-vB-ifF" firstAttribute="centerX" secondItem="r2A-AR-ywR" secondAttribute="centerX" id="o8R-IM-7wG"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="4O4-9v-B6T"/>
+                                    <constraint firstItem="r2A-AR-ywR" firstAttribute="leading" secondItem="igr-xO-ZYT" secondAttribute="trailing" id="EX4-qu-QSF"/>
+                                    <constraint firstItem="igr-xO-ZYT" firstAttribute="leading" secondItem="B45-TN-Cbi" secondAttribute="trailing" id="H82-By-7Z2"/>
+                                    <constraint firstAttribute="trailing" secondItem="r2A-AR-ywR" secondAttribute="trailing" id="UJh-UV-XvR"/>
+                                    <constraint firstItem="B45-TN-Cbi" firstAttribute="leading" secondItem="ZIE-PO-qgX" secondAttribute="leading" id="W0a-vp-OHz"/>
+                                    <constraint firstAttribute="bottom" secondItem="B45-TN-Cbi" secondAttribute="bottom" id="f7a-Wi-i8b"/>
+                                    <constraint firstItem="igr-xO-ZYT" firstAttribute="centerX" secondItem="ZIE-PO-qgX" secondAttribute="centerX" id="fkw-WN-BAl"/>
+                                    <constraint firstItem="igr-xO-ZYT" firstAttribute="top" secondItem="ZIE-PO-qgX" secondAttribute="top" constant="8" id="iXe-Lt-scC"/>
+                                    <constraint firstItem="r2A-AR-ywR" firstAttribute="top" secondItem="ZIE-PO-qgX" secondAttribute="top" id="tFY-zE-GbO"/>
+                                    <constraint firstItem="B45-TN-Cbi" firstAttribute="top" secondItem="ZIE-PO-qgX" secondAttribute="top" id="ufR-ha-lbz"/>
+                                    <constraint firstAttribute="bottom" secondItem="r2A-AR-ywR" secondAttribute="bottom" id="xXM-Ub-z44"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZIE-PO-qgX" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="2qg-SX-sv2"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="ZIE-PO-qgX" secondAttribute="bottom" id="EcD-6Q-aYw"/>
+                            <constraint firstAttribute="trailing" secondItem="ZIE-PO-qgX" secondAttribute="trailing" id="qAh-ry-KUH"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -28,4 +96,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AddRecordButton" width="35" height="35"/>
+    </resources>
 </document>

@@ -231,11 +231,55 @@
                                             <segue destination="BYZ-38-t0r" kind="show" identifier="AddRecord" id="Oan-5h-cXJ"/>
                                         </connections>
                                     </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCg-E0-UKv">
+                                        <rect key="frame" x="0.0" y="0.0" width="170" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6g6-JB-JtT">
+                                                <rect key="frame" x="69.5" y="12" width="31" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                <state key="normal" title="筛选">
+                                                    <color key="titleColor" red="0.43137254899999999" green="0.79215686269999996" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="filt:" destination="Feq-YO-ZeJ" eventType="touchUpInside" id="yGi-8a-Eif"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="6g6-JB-JtT" firstAttribute="centerX" secondItem="sCg-E0-UKv" secondAttribute="centerX" id="7Rw-Xu-M2X"/>
+                                            <constraint firstItem="6g6-JB-JtT" firstAttribute="centerY" secondItem="sCg-E0-UKv" secondAttribute="centerY" constant="-3" id="hfr-v8-f2N"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f5v-kT-gVd">
+                                        <rect key="frame" x="205" y="0.0" width="170" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="汇总" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRT-E1-pfD">
+                                                <rect key="frame" x="70" y="18" width="31" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="0.43137254899999999" green="0.79215686269999996" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="CRT-E1-pfD" firstAttribute="centerY" secondItem="f5v-kT-gVd" secondAttribute="centerY" constant="-3" id="YTS-98-obh"/>
+                                            <constraint firstItem="CRT-E1-pfD" firstAttribute="centerX" secondItem="f5v-kT-gVd" secondAttribute="centerX" id="r3h-zT-743"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="hLm-9V-s3b" firstAttribute="top" secondItem="UQX-aD-VCD" secondAttribute="top" constant="8" id="3gO-cR-toB"/>
+                                    <constraint firstAttribute="bottom" secondItem="sCg-E0-UKv" secondAttribute="bottom" id="8Tk-ho-beo"/>
+                                    <constraint firstItem="f5v-kT-gVd" firstAttribute="top" secondItem="UQX-aD-VCD" secondAttribute="top" id="ObX-Ze-1Pl"/>
+                                    <constraint firstItem="f5v-kT-gVd" firstAttribute="leading" secondItem="hLm-9V-s3b" secondAttribute="trailing" id="RQy-aF-WWB"/>
+                                    <constraint firstAttribute="trailing" secondItem="f5v-kT-gVd" secondAttribute="trailing" id="TLL-h6-ocE"/>
+                                    <constraint firstAttribute="bottom" secondItem="f5v-kT-gVd" secondAttribute="bottom" id="Xc5-ha-LWg"/>
                                     <constraint firstItem="hLm-9V-s3b" firstAttribute="centerX" secondItem="UQX-aD-VCD" secondAttribute="centerX" id="f81-hX-zaJ"/>
+                                    <constraint firstItem="sCg-E0-UKv" firstAttribute="leading" secondItem="UQX-aD-VCD" secondAttribute="leading" id="lT3-kJ-N6d"/>
+                                    <constraint firstItem="hLm-9V-s3b" firstAttribute="leading" secondItem="sCg-E0-UKv" secondAttribute="trailing" id="n3h-1j-5t2"/>
+                                    <constraint firstItem="sCg-E0-UKv" firstAttribute="top" secondItem="UQX-aD-VCD" secondAttribute="top" id="uad-dx-Lng"/>
                                     <constraint firstAttribute="height" constant="60" id="w7a-9b-JgE"/>
                                 </constraints>
                             </view>
@@ -253,6 +297,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="lpL-y7-TIS" id="vDG-RN-qlk"/>
+                        <outlet property="sumLabel" destination="CRT-E1-pfD" id="IpJ-Mu-wO4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v1t-mX-MTB" userLabel="First Responder" sceneMemberID="firstResponder"/>

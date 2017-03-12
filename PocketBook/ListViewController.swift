@@ -12,19 +12,42 @@ import DateToolsSwift
 
 class ListViewController: UIViewController {
 
-    lazy var records: Results<Record> = {
-        return try! Realm().objects(Record.self).sorted(byKeyPath: "time", ascending: false)
-    }()
+    var filter: Category? {
+        didSet {
+            if let filter = filter {
+                records = realm.objects(Record.self).filter("category == %@", filter).sorted(byKeyPath: "time", ascending: false)
+            }else {
+                records = realm.objects(Record.self).sorted(byKeyPath: "time", ascending: false)
+            }
+        }
+    }
+    var records: Results<Record>! {
+        didSet {
+            collectionView.reloadData()
+            
+            var sum = 0.0
+            for record in records {
+                sum += record.num
+            }
+            sumLabel.text = "汇总 ￥\(sum)"
+            
+        }
+    }
+    var categorys: Results<Category>!
     var token: NotificationToken?
     lazy var realm: Realm = {
         return try! Realm()
     }()
     
+    @IBOutlet weak var sumLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     var firstLoad = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        records = realm.objects(Record.self).sorted(byKeyPath: "time", ascending: false)
+        categorys = realm.objects(Category.self)
         
         NotificationCenter.default.addObserver(self, selector: #selector(ListViewController.applicationDidBecomeActive), name: NSNotification.Name(rawValue: "DidBecomeActive"), object: nil)
         
@@ -65,6 +88,20 @@ class ListViewController: UIViewController {
             performSegue(withIdentifier: "AddRecord", sender: nil)
         }
     }
+    
+    @IBAction func filt(_ sender: Any) {
+        let actionSheet = UIAlertController(title: "筛选", message: "选择一个类别", preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "全部", style: .default, handler: { (action) in
+            self.filter = nil
+        }))
+        for category in categorys {
+            actionSheet.addAction(UIAlertAction(title: category.content, style: .default, handler: { (action) in
+                self.filter = category
+            }))
+        }
+        present(actionSheet, animated: true, completion: nil)
+    }
+    
 
     /*
     // MARK: - Navigation
