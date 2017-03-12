@@ -9,6 +9,8 @@
 import UIKit
 import RealmSwift
 
+let initialDataVersion = 1
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -21,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let config = Realm.Configuration(
             // Set the new schema version. This must be greater than the previously used
             // version (if you've never set a schema version before, the version is 0).
-            schemaVersion: 1,
+            schemaVersion: 2,
             
             // Set the block which will be called automatically when opening a Realm with
             // a schema version lower than the one set above
@@ -48,6 +50,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                             // handle error
                             print(error)
                         }
+        }
+        
+        if UserDefaults.standard.integer(forKey: "InitialDataVersion") != initialDataVersion {
+            //import initial data, and set the user defaults
+            let realm = try! Realm()
+            let categorys = ["食物","杂货","化妆","健康","衣服","交通","娱乐","App"]
+            for content in categorys {
+                let category = Category()
+                category.content = content
+                try! realm.write {
+                    realm.add(category)
+                    print("category \(content) is imported")
+                }
+            }
+            UserDefaults.standard.set(initialDataVersion, forKey: "InitialDataVersion")
         }
         
         return true

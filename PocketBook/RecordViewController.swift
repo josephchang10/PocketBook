@@ -14,6 +14,11 @@ class Record: Object {
     dynamic var des: String = ""
     dynamic var num: Double = 0
     dynamic var time: Date!
+    dynamic var category: Category?
+}
+
+class Category: Object {
+    dynamic var content: String = ""
 }
 
 class RecordViewController: UIViewController{
